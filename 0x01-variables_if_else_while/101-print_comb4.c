@@ -13,9 +13,11 @@ int main(void)
 
 	for (i = '0'; i <= '7'; i++)
 	{
-		for (j = '1'; j <= '8'; j++)
+		j = i + 1;
+		for (; j <= '8'; j++)
 		{
-			for (k = '2'; k <= '9'; k++)
+			k = j + 1;
+			for (; k <= '9'; k++)
 			{
 				if (i != j && j != k)
 				{
@@ -29,9 +31,7 @@ int main(void)
 					}
 				}
 			}
-			k = j + 1;
 		}
-		j = i + 1;
 	}
 	putchar('\n');
 	return (0);
