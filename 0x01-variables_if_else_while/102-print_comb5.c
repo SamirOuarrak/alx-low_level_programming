@@ -20,21 +20,17 @@ int main(void)
 			d = b + 1;
 			for (; c <= '9'; c++)
 			{
-
 				for (;d <= '9'; d++)
 				{
-					if (a != j && j != k)
+					putchar(a);
+					putchar(b);
+					putchar(' ');
+					putchar(c);
+					putchar(d);
+					if (a != '9' || b != '8' || c != '9')
 					{
-						putchar(a);
-						putchar(b);
+						putchar(',');
 						putchar(' ');
-						putchar(c);
-						putchar(d):
-						if (a != '9' || b != '8' || c != '9')
-						{
-							putchar(',');
-							putchar(' ');
-						}
 					}
 				}
 			}
