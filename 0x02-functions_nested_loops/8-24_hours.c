@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _jack_bauer - check if 'c' is lower
+ * jack_bauer - print time
  *
  */
 void jack_bauer(void)
