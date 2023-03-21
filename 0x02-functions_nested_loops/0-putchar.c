@@ -7,8 +7,14 @@
  */
 int main(void)
 {
-	const char myString[] = "_putchar\n";
+	const char myStr[] = "_putchar\n";
+	int i;
 
-	write(0, myString, 9);
+	i = 0;
+	while (myStr[i] != '\0')
+	{
+		_putchar(myStr[i]);
+		i++;
+	}
 	return (0);
 }
