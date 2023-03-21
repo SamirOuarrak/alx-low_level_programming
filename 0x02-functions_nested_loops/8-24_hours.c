@@ -1,14 +1,23 @@
 #include "main.h"
 /**
- * _islower - check if 'c' is lower
- * @c: char to check
- * Return: 1 if c is lowercase, 0 otherwise
+ * _jack_bauer - check if 'c' is lower
+ *
  */
-int _islower(int c)
+void jack_bauer(void)
 {
-	if (c >= 'a' && c <= 'z')
+	int i;
+	int j;
+
+	for (i = 0; i <= 23; i++)
 	{
-		return (1);
+		for (j = 0; j <= 59; j++)
+		{
+			_putchar('0' + i / 10);
+			_putchar('0' + i % 10);
+			_putchar(':');
+			_putchar('0' + j / 10);
+			_putchar('0' + j % 10);
+			_putchar('\n');
+		}
 	}
-	return (0);
 }
