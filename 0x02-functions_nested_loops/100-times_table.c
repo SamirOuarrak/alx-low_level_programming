@@ -17,6 +17,7 @@ void _putnb(int n)
 }
 /**
  * print_times_table - prints the 9 times table, starting with 0.
+ * @n: count
  */
 void print_times_table(int n)
 {
