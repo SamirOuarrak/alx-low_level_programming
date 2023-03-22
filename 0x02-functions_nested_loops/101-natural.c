@@ -30,7 +30,7 @@ int main(void)
 	while (i <= 1)
 	{
 		printf("%d\n", getSum(1023));
-		i++
+		i++;
 	}
 	return (0);
 }
