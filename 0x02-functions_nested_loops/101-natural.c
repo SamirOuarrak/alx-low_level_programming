@@ -29,8 +29,8 @@ int main(void)
 	i = 1;
 	while (i <= 1)
 	{
-		printf("%d\n", getSum(1023));
 		i++;
 	}
+	printf("%d\n", getSum(1023));
 	return (0);
 }
