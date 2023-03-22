@@ -24,6 +24,13 @@ int getSum(int n)
  */
 int main(void)
 {
-	printf("%d\n", getSum(1023));
+	int i;
+
+	i = 1;
+	while (i <= 1)
+	{
+		printf("%d\n", getSum(1023));
+		i++
+	}
 	return (0);
 }
