@@ -4,23 +4,25 @@
  * @a : first number (1)
  * @b : Second number (2)
  * @count : count recurssion
+ * retun : b
  */
 
-void bonacci(unsigned long a, unsigned long b, int count)
+unsigned long int bonacci(unsigned long int a, unsigned long int b, int count)
 {
 	if (a == 1)
 	{
 		printf("1, ");
 	}
-	if (count < 98)
+	if (count < 91)
 	{
 		if (a != 1)
 		{
 			printf(", ");
 		}
 		printf("%lu", b);
-		bonacci(b, a + b, count + 1);
+		return(bonacci(b, a + b, count + 1));
 	}
+	return (b);
 }
 /**
  * main - check the code.
@@ -29,7 +31,7 @@ void bonacci(unsigned long a, unsigned long b, int count)
  */
 int main(void)
 {
-	bonacci(1, 2, 1);
+	printf("%lu", bonacci(1, 2, 1));
 	printf("\n");
 	return (0);
 }
