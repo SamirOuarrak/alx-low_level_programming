@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _islower - check if 'c' is lower
+ * _isupper - check if 'c' is lower
  * @c: char to check
  * Return: 1 if c is upper, 0 otherwise
  */
-int _islower(int c)
+int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
