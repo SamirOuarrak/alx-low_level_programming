@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - Fizz-Buzz
+ * print_triangle - triangle
  * @size: Size
  * Return: always 1
  */
