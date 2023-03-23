@@ -20,12 +20,12 @@ void more_numbers(void)
 				_putchar('1');
 			}
 			_putchar(c);
-			if (c == '9' && count == 1)
+			c++;
+			if (c == '9' + 1 && count == 1)
 			{
 				count++;
 				c = '0';
 			}
-			c++;
 		}
 		i++;
 		_putchar('\n');
