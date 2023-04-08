@@ -8,7 +8,7 @@
 int _atoi(char *str)
 {
 	int i;
-	int nb;
+	unsigned int nb;
 	int neg;
 
 	i = 0;
