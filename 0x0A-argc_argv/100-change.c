@@ -43,7 +43,10 @@ int main(int argc, char __attribute__((unused)) *argv[])
 			}
 			i++;
 		}
-		printf("%d\n", getChange(atoi(argv[1])));
+		if (atoi(argv[1] < 0))
+			printf("0\n");
+		else
+			printf("%d\n", getChange(atoi(argv[1])));
 	}
 	else
 	{
