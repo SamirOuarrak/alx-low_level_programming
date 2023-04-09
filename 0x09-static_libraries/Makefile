@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = *.c
 OBJ = $(SRC:.c=.o)
-NAME = libmy.a
+NAME = liball.a
 
 all: $(NAME)
 
