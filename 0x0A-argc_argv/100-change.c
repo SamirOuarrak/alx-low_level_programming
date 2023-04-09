@@ -52,6 +52,6 @@ int main(int argc, char __attribute__((unused)) *argv[])
 	{
 		printf("Error\n");
 		return (1);
-	}	
+	}
 	return (0);
 }
