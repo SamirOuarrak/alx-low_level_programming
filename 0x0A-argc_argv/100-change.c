@@ -39,13 +39,16 @@ int main(int argc, char __attribute__((unused)) *argv[])
 			if (argv[1][i] < '0' ||  argv[1][i] > '9')
 			{
 				printf("Error\n");
-				return (0);
+				return (1);
 			}
 			i++;
 		}
 		printf("%d\n", getChange(atoi(argv[1])));
 	}
 	else
+	{
 		printf("Error\n");
+		return (1);
+	}	
 	return (0);
 }
