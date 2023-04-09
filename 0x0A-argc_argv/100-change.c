@@ -29,21 +29,21 @@ int getChange(int c)
  */
 int main(int argc, char __attribute__((unused)) *argv[])
 {
-	int i;
+/*	int i;
 
 	i = 0;
-	if (argc == 2)
+*/	if (argc == 2)
 	{
-		while (argv[1][i] != '\0')
-		{
-			if (argv[1][i] < '0' ||  argv[1][i] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			i++;
-		}
-		if (atoi(argv[1]) < 0)
+/**		while (argv[1][i] != '\0')
+ *		{
+ *			if (argv[1][i] < '0' ||  argv[1][i] > '9')
+ *			{
+ *				printf("Error\n");
+ *				return (1);
+ *			}
+ *			i++;
+ *		}
+ */		if (atoi(argv[1]) < 0)
 			printf("0\n");
 		else
 			printf("%d\n", getChange(atoi(argv[1])));
