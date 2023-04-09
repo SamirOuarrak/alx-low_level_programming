@@ -19,7 +19,7 @@ SRC = 0-isupper.c\
       5-strstr.c\
       6-abs.c\
       9-strcpy.c\
-      _putchar.c\
+      _putchar.c
 OBJ = 0-isupper.o\
       0-memset.o\
       0-strcat.o\
@@ -39,7 +39,7 @@ OBJ = 0-isupper.o\
       5-strstr.o\
       6-abs.o\
       9-strcpy.o\
-      _putchar.o\
+      _putchar.o
 NAME = libmy.a
 
 all: $(NAME)
