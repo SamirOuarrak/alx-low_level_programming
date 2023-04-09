@@ -14,17 +14,17 @@ int main(int argc, char __attribute__((unused)) *argv[])
 	sum = 0;
 	if (argc > 1)
 	{
-		while (argc-- > 0)
+		while (--argc > 0)
 		{
 			i = 0;
-			while argv[argc][i]
+			while (argv[argc][i] != '\0')
 			{
-				if argv[argc][i] < '0' ||  argv[argc][i] > '9'
+				if (argv[argc][i] < '0' ||  argv[argc][i] > '9')
 				{
 					printf("Error\n");
-					return(0);
+					return (0);
 				}
-				i++:
+				i++;
 			}
 			sum += atoi(argv[argc]);
 		}
