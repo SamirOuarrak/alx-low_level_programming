@@ -37,15 +37,15 @@ int main(int argc, char __attribute__((unused)) *argv[])
 		if (argv[1][0] == '-')
 			i++;
 		while (argv[1][i] != '\0')
- 		{
- 			if (argv[1][i] < '0' ||  argv[1][i] > '9')
- 			{
- 				printf("Error\n");
- 				return (1);
- 			}
- 			i++;
- 		}
- 		if (atoi(argv[1]) < 0)
+		{
+			if (argv[1][i] < '0' ||  argv[1][i] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			i++;
+		}
+		if (atoi(argv[1]) < 0)
 			printf("0\n");
 		else
 			printf("%d\n", getChange(atoi(argv[1])));
