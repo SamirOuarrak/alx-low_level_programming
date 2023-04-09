@@ -1,2 +1,4 @@
 #!/bin/bash
-make re
+gcc -Wall -Werror -Wextra -pedantic -c *.c
+ar -rc liball.a *.o
+rm *.o
