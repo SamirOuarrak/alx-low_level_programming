@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * argstostr - argstostr
@@ -18,9 +19,8 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-	i = 0;
 	lenArgv = 0;
-	while (i++ < ac)
+	for (i = 0; i < ac; i++)
 		lenArgv += (av[i] ? strlen(av[i]) : 0) + 1;
 	lenArgv++;
 	str = malloc(sizeof(char) * lenArgv);
