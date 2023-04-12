@@ -55,7 +55,7 @@ char **strtow(char *str)
 	int i;
 	int j;
 
-	if (!str || !*str || countWord(str) == 0)
+	if (!str || !*str || !countWord(str))
 		return (NULL);
 	arr = malloc(sizeof(*arr) * (countWord(str) + 1));
 	if (arr == NULL)
@@ -68,7 +68,7 @@ char **strtow(char *str)
 			str++;
 		if (!*str)
 			break;
-		arr[i] = malloc(sizeof(**arr) * getLen(str) + 1);
+		arr[i] = malloc(sizeof(**arr) * (getLen(str) + 1));
 		if (arr[i] == NULL)
 		{
 			while (i > 0)
