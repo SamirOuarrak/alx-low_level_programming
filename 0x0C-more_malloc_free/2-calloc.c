@@ -3,13 +3,12 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * str_concat - concat
- * @s1: string 1
- * @s2: string 2
- * @n : size of s2 to copy
- * Return: s1 + s2
+ * _calloc : calloc
+ * @nmemb: nmemb
+ * @size: size
+ * Return: ptr to new address
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *s;
 	char *ptr;
@@ -23,6 +22,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		*s++ = *s1++;
 	while (n-- > 0)
 		*s++ = *s2++;
-	*(s + 1) = '\0';
+	*s = '\0';
 	return (ptr);
 }
