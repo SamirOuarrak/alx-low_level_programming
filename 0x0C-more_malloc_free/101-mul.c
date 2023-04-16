@@ -65,7 +65,7 @@ char *mult(char* nb1, char nb2)
 	while (nb1)
 	{
 		result = reallocAndPushByOne(result);
-		m = atoi((char*)(*nb1)) * atoi((char*)nb2) + r;
+		m =  (*nb1) + '0' * nb2 + '0' + r;
 		r = m % 10;
 		m /= 10;
 		*result = '0' + m;
