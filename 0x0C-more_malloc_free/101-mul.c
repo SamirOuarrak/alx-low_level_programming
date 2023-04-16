@@ -26,6 +26,6 @@ int ParseNumbers(int ac, char **av)
 
 int main(int argc, char *argv[])
 {
-	
+	ParseNumbers(argc, argv);
 	return (0);
 }
