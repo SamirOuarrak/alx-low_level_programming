@@ -10,10 +10,10 @@ char *_strdup(char *str)
 	char *dup;
 	size_t i;
 
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	dup = malloc(sizeof(char) * strlen(str) + 1);
-	if (dup != NULL)
+	if (!dup)
 	{
 		for (i = 0; i < strlen(str); i++)
 			dup[i] = str[i];
@@ -32,22 +32,20 @@ char *_strdup(char *str)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *myDog;
+	dog_t *myDog = NULL;
 
-	if (!name || !owner)
-		return (NULL);
 	myDog = malloc(sizeof(dog_t));
 	if (!myDog)
 		return (NULL);
 	myDog->age = age;
 	myDog->name = _strdup(name);
-	if (!myDog->name)
+	if (!myDog->name && !name)
 	{
 		free(myDog);
 		return (NULL);
 	}
 	myDog->owner = _strdup(owner);
-	if (!myDog->owner)
+	if (!myDog->owner && !owner)
 	{
 		free(myDog->name);
 		free(myDog);
