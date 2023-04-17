@@ -1,9 +1,9 @@
 #include "dog.h"
 
- /**
-  * _strdup - duplicate string
-  * @str: string to duplicate
-  * Return: new string
+/**
+ * _strdup - duplicate string
+ * @str: string to duplicate
+ * Return: new string
  */
 char *_strdup(char *str)
 {
