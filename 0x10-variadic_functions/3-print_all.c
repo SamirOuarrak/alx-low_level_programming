@@ -53,11 +53,12 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (arg[j])
 		{
-			if (format[i] == arg[j++] && isToSep)
+			if (format[i] == arg[j] && isToSep)
 			{
 				printf(", ");
 				break;
 			}
+			j++;
 		}
 		isToSep = Dispatcher(format[i++], ap);
 	}
