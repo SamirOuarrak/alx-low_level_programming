@@ -16,7 +16,7 @@ int Dispatcher(char c, va_list ap)
 			printf("%d", va_arg(ap, int));
 			break;
 		case 'f':
-			printf("%f", va_arg(ap, double));
+			printf("%f", (float) va_arg(ap, double));
 			break;
 		case 'c':
 			printf("%c", va_arg(ap, int));
