@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-    print_all("cesis", NULL , 3, NULL);
+    print_all("fs", 6.5, NULL);
     return (0);
 }
