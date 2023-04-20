@@ -25,7 +25,7 @@ int Dispatcher(char c, va_list ap)
 			str = va_arg(ap, char *);
 			if (str)
 			{
-				printf("%str", str);
+				printf("%s", str);
 				return (1);
 			}
 			printf("(nil)");
@@ -53,12 +53,11 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (arg[j])
 		{
-			if (format[i] == arg[j] && isToSep)
+			if (format[i] == arg[j++] && isToSep)
 			{
 				printf(", ");
 				break;
 			}
-			j++;
 		}
 		isToSep = Dispatcher(format[i++], ap);
 	}
