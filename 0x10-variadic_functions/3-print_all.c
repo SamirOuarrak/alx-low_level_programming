@@ -47,6 +47,8 @@ void print_all(const char * const format, ...)
 	unsigned int isToSep = 0;
 	const char arg[] = "cifs";
 
+	if (!format)
+		return ;
 	va_start(ap, format);
 	while (format && format[i])
 	{
