@@ -8,12 +8,14 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *ptr = *head;
-	listint_t *PtrPrev = *head;
+	listint_t *ptr;
+	listint_t *PtrPrev;
 	int i = index;
 
 	if (!head || !*head)
 		return (-1);
+	ptr = *head;
+	PtrPrev = *head;
 	if (!i--)
 	{
 		*head = (*head)->next;
