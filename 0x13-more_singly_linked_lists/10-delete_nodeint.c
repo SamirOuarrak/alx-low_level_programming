@@ -20,9 +20,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		*head = (*head)->next;
 		free(ptr);
 	}
-	while (ptr->next && (i-- >= 0))
+	while (ptr->next && (i >= 0))
 	{
-		if (!i)
+		if (!i--)
 		{
 			new->next = ptr->next;
 			ptr->next = new;
