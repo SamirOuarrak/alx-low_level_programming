@@ -10,18 +10,19 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *new = NULL;
 	listint_t *ptr;
+	int i = index;
 
 	if (!head || !*head)
 		return (-1);
 	ptr = *head;
-	if (!index--)
+	if (!i--)
 	{
 		*head = (*head)->next;
 		free(ptr);
 	}
-	while (ptr->next && index-- >= 0)
+	while (ptr->next && (i-- >= 0))
 	{
-		if (!index)
+		if (!i)
 		{
 			new->next = ptr->next;
 			ptr->next = new;
