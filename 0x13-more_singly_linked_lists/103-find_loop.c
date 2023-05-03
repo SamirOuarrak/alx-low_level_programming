@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * find_listint_loop - Finds the start of a loop in a listint_t linked list.
