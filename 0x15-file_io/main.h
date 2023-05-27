@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 #define BUFF 1024
+#define REV(n) ((n << 24) | (((n >> 16) << 24) >> 16) | \
+(((n << 16) >> 24) << 16) | (n >> 24))
 
 #include <unistd.h>
 #include <sys/types.h>
