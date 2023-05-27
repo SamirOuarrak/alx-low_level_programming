@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "main.h"
 
 /**
@@ -21,9 +18,9 @@ void print_binary(unsigned long int n)
 	while (i)
 	{
 		if (i & n)
-			j++, write(1, '1', 1);
+			j++, write(1, "1", 1);
 		else
-			j++, write(1, '0', 1);
+			j++, write(1, "0", 1);
 		i = i >> 1;
 	}
 }
