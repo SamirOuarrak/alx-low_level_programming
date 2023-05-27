@@ -115,12 +115,12 @@ void _osabi(unsigned char *_ident)
 }
 
 /**
- * type - print the type
+ * _type - print the type
  * @_ident: the ELF struct
  * @_type: data to compare and print.
  * return: no return is a void func.
  */
-void type(unsigned int _type, unsigned char *_ident)
+void _type(unsigned int _type, unsigned char *_ident)
 {
 	_ident[EI_DATA] == ELFDATA2MSB ? _type = _type >> 8 : _type;
 
@@ -140,12 +140,12 @@ void type(unsigned int _type, unsigned char *_ident)
 }
 
 /**
- * entry - print the entry point
+ * _entry - print the entry point
  * @_ident: the ELF struct
  * @e_entry: the data to print
  * return: no return is a void func.
  */
-void entry(unsigned int e_entry, unsigned char *_ident)
+void _entry(unsigned int e_entry, unsigned char *_ident)
 {
 	if (_ident[EI_DATA] == ELFDATA2MSB)
 		e_entry = REV(e_entry);
@@ -185,15 +185,15 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	_check(file->e_ident);
-	magic(file->e_ident);
-	class(file->e_ident);
-	data(file->e_ident);
-	version(file->e_ident);
-	osabi(file->e_ident);
+	_magic(file->e_ident);
+	_class(file->e_ident);
+	_data(file->e_ident);
+	_version(file->e_ident);
+	_osabi(file->e_ident);
 	printf("  ABI Version:                       ");
 	printf("%i\n", file->e_ident[EI_ABIVERSION]);
-	type(file->e_type, file->e_ident);
-	entry(file->e_entry, file->e_ident);
+	_type(file->e_type, file->e_ident);
+	_entry(file->e_entry, file->e_ident);
 	free(file);
 	_close = close(fd);
 	if (_close)
